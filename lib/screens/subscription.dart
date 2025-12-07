@@ -44,9 +44,10 @@ class Subscription extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(width: 45,),
+                  SizedBox(width: 50,),
                   Text(
                     "Управление подпиской",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -54,12 +55,97 @@ class Subscription extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     ),
                   )
-                ],
+                ]
               ),
             ),
+            Positioned(
+              top: 116,
+              left: 69,
+              child: Row (
+                  children: [
+                    SizedBox(
+                    width: 32,
+                    height: 32,
+                    child: Image.asset(
+                      "images/picture_crown.png",
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                    SizedBox(width: 10,),
+                    Text(
+                        "SIMPA PREMIUM",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontFamily: 'Nunito',
+                          fontWeight: FontWeight.w800,
+                        ),
+                    ),
+                  ]
+              ),
+            ),
+          Positioned(
+            top: 168,
+            left: 16,
+            right: 16,
+            child: SizedBox(
+              width: 343,
+              height: 1,
+              child: Image.asset("images/line.png",
+                fit: BoxFit.contain,),
+              ),
+            ),
+            //сюда можешь вставлять код свой , и после стека тоже(если надо будет)
+            Positioned(
+              top: 335,
+              left: 16,
+              right: 16,
+              child: SizedBox(
+                width: 343,
+                height: 1,
+                child: Image.asset("images/line.png",
+                  fit: BoxFit.contain,),
+              ),
+            ),
+            Positioned(
+                top:351,
+                left: 16,
+                child: Column(
+                  children: [
+                    _print_logo(),
+                    Padding(
+                    padding: EdgeInsets.only(top: 53),
+                    child: _print_logo(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 37),
+                      child: _print_logo(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 55),
+                      child: _print_logo(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 37),
+                      child: _print_logo(),
+                    ),
+                  ],
+                )
+            )
           ],
         ),
       ),
     );
   }
+}
+
+Widget _print_logo() {
+  return SizedBox(
+    width: 20,
+    height: 20,
+    child: Image.asset(
+      "images/logo_like_sber.png",
+      fit: BoxFit.contain,
+    ),
+  );
 }
