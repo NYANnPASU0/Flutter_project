@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:laba1/widgets/GardientButton.dart';
+import 'package:laba1/widgets/DynamicButton.dart';
 class Subscription extends StatelessWidget {
   const Subscription({super.key});
 
@@ -107,7 +108,8 @@ class Subscription extends StatelessWidget {
                   fit: BoxFit.contain,),
               ),
             ),
-            Positioned(
+            Positioned
+            (
                 top:351,
                 left: 16,
                 child: Column(
@@ -129,9 +131,10 @@ class Subscription extends StatelessWidget {
                       padding: EdgeInsets.only(top: 37),
                       child: _print_logo(),
                     ),
+                        GardientButton(text: 'попа'),//создание кнопки
                   ],
                 )
-            )
+            ),
           ],
         ),
       ),
