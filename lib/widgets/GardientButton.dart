@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GardientButton extends StatelessWidget {
-  final String text;
-  //final VoidCallback onPressed;
-
-  const GardientButton({
-    Key? key,
-    required this.text,
-    //this.onPressed,
-  }) : super(key: key);
-
+class GardientButton extends StatefulWidget {
+  String text;
+  GardientButton({super.key, required this.text});
+  @override
+  State<GardientButton> createState() => _GardientButtonState();
+}
+class _GardientButtonState extends State<GardientButton>
+{
   @override
   Widget build(BuildContext context)
   {
@@ -22,7 +20,9 @@ class GardientButton extends StatelessWidget {
         alignment: Alignment.center,
         child: ElevatedButton
           (
-          onPressed:(){ print("Clicked!!!");},
+          onPressed:(){ setState(() {
+              widget.text;
+            });},
           style: ElevatedButton.styleFrom
             (
             backgroundColor: Colors.transparent,
@@ -52,16 +52,16 @@ class GardientButton extends StatelessWidget {
                 end: Alignment.centerRight,
               ),
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15),
-                topRight: Radius.circular(15),
-                bottomLeft: Radius.circular(0),
-                bottomRight: Radius.circular(15),
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
+                bottomLeft: Radius.circular(2),
+                bottomRight: Radius.circular(16),
               ),
             ),
             child: Center(
               child: Text
                 (
-                "Купить за " + text + " SC",
+                "Купить за " + widget.text + " SC",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 17,
@@ -76,7 +76,4 @@ class GardientButton extends StatelessWidget {
       ),
     );
   }
-
-
-
 }

@@ -23,6 +23,10 @@ flutter:
     - images/rectangles.png
     - images/vect_back.png
     - images/picture_crown.png
+    - images/logo_like_sber.png
+    - images/line.png
+    - images/rectangle_2074.png
+    - images/coin.png
 
   fonts:
     - family: Nunito
