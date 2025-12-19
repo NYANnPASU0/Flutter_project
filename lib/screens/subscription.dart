@@ -22,110 +22,111 @@ class _SubscriptionState extends State<Subscription>
     setState(() {
       _selectedButtonText = buttonText;
     });
-  } 
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Stack(
-          children: [
-            Background(),
-            Positioned.fill(
-              child: BackgroundTrans()
-            ),
-            Positioned(
-              top: 60,
-              left: 25,
-              right: 25,
-              child: SubscribeNav()
-            ),
-            Positioned(
-              top: 116,
-              left: 69,
-              child: Logo()
-            ),
-            Positioned(
-              top: 168,
-              left: 16,
-              right: 16,
-              child: Line()
-            ),
-            Positioned(
-              top: 335,
-              left: 16,
-              right: 16,
-              child: SubInfo()
-            ),
-
-            Positioned(
-              top: 335,
-              left: 16,
-              right: 16,
-              child: Line(),
-            ),
-            Positioned(
-              top: 674,
-              left: 16,
-              right: 16,
-              child: Line()
-            ),
-            Positioned(
-              top: 174,
-              left: 16,
-              right: 16,
-              child:
-            Container(
-              padding: EdgeInsets.zero,
-              width: 343,
-              height: 143,
-              child:
-            Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-            DynamicButton
-            (
-              strprice: '10',
-              title1: '3',
-              title2: 'дня',
-              selectedText: _selectedButtonText,
-              onSelect: _updateSelection,
-            ),
-            DynamicButton
-            (
-              strprice: '20',
-              title1: '7',
-              title2: 'дней',
-              selectedText: _selectedButtonText,
-              onSelect: _updateSelection,
-            ),
-            DynamicButton
-            (
-              strprice: '75',
-              title1: '30',
-              title2: 'дней',
-              selectedText: _selectedButtonText,
-              onSelect: _updateSelection,
-            ),
-            DynamicButton
-            (
-              strprice: '200',
-              title1: '90',
-              title2: 'дней',
-              selectedText: _selectedButtonText,
-              onSelect: _updateSelection,
-            ),
-            ],
-            ),
-            ),
-            ),
-            Positioned(
-              top: 734,
-              left: 16,
-              right: 16,
-              child: GardientButton(text: _selectedButtonText)
-            ),
-          ]
+              Background(),
+              Positioned.fill(
+                  child: BackgroundTrans()
+              ),
+              Positioned(
+                  top: 60,
+                  left: 25,
+                  right: 25,
+                  child: SubscribeNav()
+              ),
+              Positioned(
+                  top: 116,
+                  left: 69,
+                  child: Logo()
+              ),
+              Positioned(
+                  top: 168,
+                  left: 16,
+                  right: 16,
+                  child: Line()
+              ),
+              Positioned(
+                  top: 335,
+                  left: 16,
+                  right: 16,
+                  child: SubInfo()
+              ),
+
+              Positioned(
+                top: 335,
+                left: 16,
+                right: 16,
+                child: Line(),
+              ),
+              Positioned(
+                  top: 674,
+                  left: 16,
+                  right: 16,
+                  child: Line()
+              ),
+              Positioned(
+                top: 174,
+                left: 16,
+                right: 16,
+                child:
+                Container(
+                  padding: EdgeInsets.zero,
+                  width: 343,
+                  height: 143,
+                  child:
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      DynamicButton
+                        (
+                        strprice: '10',
+                        title1: '3',
+                        title2: 'дня',
+                        selectedText: _selectedButtonText,
+                        onSelect: _updateSelection,
+                      ),
+                      DynamicButton
+                        (
+                        strprice: '20',
+                        title1: '7',
+                        title2: 'дней',
+                        selectedText: _selectedButtonText,
+                        onSelect: _updateSelection,
+                      ),
+                      DynamicButton
+                        (
+                        strprice: '75',
+                        title1: '30',
+                        title2: 'дней',
+                        selectedText: _selectedButtonText,
+                        onSelect: _updateSelection,
+                      ),
+                      DynamicButton
+                        (
+                        strprice: '200',
+                        title1: '90',
+                        title2: 'дней',
+                        selectedText: _selectedButtonText,
+                        onSelect: _updateSelection,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                  top: 704,
+                  left: 16,
+                  right: 16,
+                  child: GardientButton(text: _selectedButtonText)
+              ),
+            ]
         ),
       ),
     );
